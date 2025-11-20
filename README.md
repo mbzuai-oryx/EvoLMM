@@ -29,6 +29,7 @@ EvoLMM couples a **Proposer** and **Solver** built on the same vision-language b
 - `src/train.py`: core training loop, LoRA setup, adaptive KL, checkpoints, and logging.
 - `src/train.sh`: example hyperparameters for Qwen2.5-VL-7B with LoRA.
 - `Evaluation/lmms-eval`: evaluation harness (based on lmms-eval) with a ready-made script.
+- `inference.py`: Inference script using the LoRA checkpoints.
 
 ## Setup
 1. Install Python dependencies:
@@ -76,6 +77,12 @@ Notes:
 - Set `--device`, `--dtype`, and `--device_map` for your hardware (defaults use CUDA if available).
 - Checkpoints and per-iteration logs land in `runs/<run_name>/`.
 - Adaptive resume is supported: keep `--wandb_run_name` fixed and checkpoints under `runs/` to auto-restore weights/optimizers/RNG.
+
+## Inference
+Inference script using the LoRA checkpoints from Huggingface (you can use your own LoRA checkpoints)
+```bash
+python inference.py
+```
 
 ## Evaluation
 The evaluation harness in `Evaluation/lmms-eval` mirrors the training backbone. Example to evaluate a LoRA checkpoint on ChartQA:
