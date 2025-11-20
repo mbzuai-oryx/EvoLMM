@@ -4,7 +4,7 @@
   <a href="https://mbzuai-oryx.github.io/EvoLMM/">
     <img src="https://img.shields.io/badge/Project-Page-f68946?style=for-the-badge" alt="Project Page">
   </a>
-  <a href="https://huggingface.co/mbzuai-oryx">
+  <a href="https://huggingface.co/omkarthawakar/EvoLMM">
     <img src="https://img.shields.io/badge/HuggingFace-Models-ffae00?style=for-the-badge&logo=huggingface&logoColor=white" alt="HuggingFace">
   </a>
   <a href="https://arxiv.org/abs/TBD">
@@ -100,6 +100,17 @@ Replace `lora_path` with the checkpoint directory you want to test. Additional t
 | Qwen2.5-VL-7B (baseline)                | 84.00   | 68.46     | 23.91      | 43.78     | 80.44                         | 82.61 | 88.30     | 51.11              |
 | Qwen2.5-VL-7B + Discrete reward         | 84.62   | 68.88     | 22.52      | 42.10     | 80.52                         | 82.18 | 87.98     | 50.84              |
 | **Qwen2.5-VL-7B + Continuous reward (EvoLMM)** | **86.70** | **70.52**   | **24.81**   | **44.88**   | **81.06**                     | **83.41** | **89.50**   | **52.01**          |
+
+
+#### Scaling behaviour of our EvoLMM self-evolving framework across model sizes in the Qwen2.5-VL family
+
+| Model                        | ChartQA | MathVista | MathVision | MathVerse | InfoGraphic-VQA_val | AI2D  | ScienceQA | MMMU_val |
+|------------------------------|----------|------------|-------------|------------|----------------------|--------|------------|-----------|
+| Qwen2.5-VL-7B (Base)         | 84.00    | 68.20      | 23.91       | 43.78      | 80.44               | 82.61  | 88.30      | 51.11     |
+| **Qwen2.5-VL-7B (EvoLMM)**   | **86.70**| **70.52**  | **24.81**   | **44.88**  | **81.06**           | **83.41**| **89.50** | **52.01** |
+| Qwen2.5-VL-72B (Base)        | 88.20    | 73.93      | 36.92       | 54.09      | 85.97               | 87.34  | 93.36      | 65.86     |
+| **Qwen2.5-VL-72B (EvoLMM)**  | **91.04**| **76.44**  | **38.31**   | **55.45**  | **86.63**           | **88.19**| **94.63** | **67.02** |
+
 
 For additional ablations (LoRA vs. QLoRA/full fine-tune) and other backbones (InternVL3-8B, Gemma-3-12B, Llama-3.2-11B-Vision), see <a href="">arxiv</a>.
 
