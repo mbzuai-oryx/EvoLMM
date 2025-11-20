@@ -4,9 +4,6 @@
   <a href="https://mbzuai-oryx.github.io/EvoLMM/">
     <img src="https://img.shields.io/badge/Project-Page-f68946?style=for-the-badge" alt="Project Page">
   </a>
-  <a href="https://github.com/mbzuai-oryx/EvoLMM">
-    <img src="https://img.shields.io/badge/GitHub-Code-181717?style=for-the-badge&logo=github" alt="Code">
-  </a>
   <a href="https://huggingface.co/mbzuai-oryx">
     <img src="https://img.shields.io/badge/HuggingFace-Models-ffae00?style=for-the-badge&logo=huggingface&logoColor=white" alt="HuggingFace">
   </a>
