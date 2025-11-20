@@ -491,6 +491,53 @@
         </div>
       </div>
 
+      <!-- Table 4 -->
+      <br>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div style="text-align: center;">
+            <table class="data-table" style="width: 100%;">
+              <caption>Scaling behaviour of our EvoLMM self-evolving framework across model sizes in the Qwen2.5-VL family.</caption>
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>ChartQA</th>
+                  <th>MathVista</th>
+                  <th>MathVision</th>
+                  <th>MathVerse</th>
+                  <th>InfoGraphic-VQA<sub>val</sub></th>
+                  <th>AI2D</th>
+                  <th>ScienceQA</th>
+                  <th>MMMU<sub>val</sub></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Qwen2.5-VL-7B (Base)</td>
+                  <td>84.00</td><td>68.20</td><td>23.91</td><td>43.78</td>
+                  <td>80.44</td><td>82.61</td><td>88.30</td><td>51.11</td>
+                </tr>
+                <tr class="highlight">
+                  <td><b>Qwen2.5-VL-7B (EvoLMM)</b></td>
+                  <td><b>86.70</b></td><td><b>70.52</b></td><td><b>24.81</b></td><td><b>44.88</b></td>
+                  <td><b>81.06</b></td><td><b>83.41</b></td><td><b>89.50</b></td><td><b>52.01</b></td>
+                </tr>
+                <tr>
+                  <td>Qwen2.5-VL-72B (Base)</td>
+                  <td>88.20</td><td>73.93</td><td>36.92</td><td>54.09</td>
+                  <td>85.97</td><td>87.34</td><td>93.36</td><td>65.86</td>
+                </tr>
+                <tr class="highlight">
+                  <td><b>Qwen2.5-VL-72B (EvoLMM)</b></td>
+                  <td><b>91.04</b></td><td><b>76.44</b></td><td><b>38.31</b></td><td><b>55.45</b></td>
+                  <td><b>86.63</b></td><td><b>88.19</b></td><td><b>94.63</b></td><td><b>67.02</b></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
