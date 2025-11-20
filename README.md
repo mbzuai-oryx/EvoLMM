@@ -1,19 +1,37 @@
 # EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards
 
+<p>
+  <a href="https://mbzuai-oryx.github.io/EvoLMM/">
+    <img src="https://img.shields.io/badge/Project-Page-f68946?style=for-the-badge" alt="Project Page">
+  </a>
+  <a href="https://github.com/mbzuai-oryx/EvoLMM">
+    <img src="https://img.shields.io/badge/GitHub-Code-181717?style=for-the-badge&logo=github" alt="Code">
+  </a>
+  <a href="https://huggingface.co/mbzuai-oryx">
+    <img src="https://img.shields.io/badge/HuggingFace-Models-ffae00?style=for-the-badge&logo=huggingface&logoColor=white" alt="HuggingFace">
+  </a>
+  <a href="https://arxiv.org/abs/TBD">
+    <img src="https://img.shields.io/badge/arXiv-Coming%20Soon-008ad7?style=for-the-badge" alt="arXiv (coming soon)">
+  </a>
+</p>
+
 ## Abstract
 EvoLMM couples a **Proposer** and **Solver** built on the same vision-language backbone and trains them end-to-end with continuous, self-consistency rewards. The Proposer generates image-grounded questions while the Solver answers them; both are optimized via KL-regularized REINFORCE with adaptive baselines and lightweight LoRA adapters. The framework needs only raw images (no labels or external reward models) and delivers ~2–3% absolute gains on multimodal math/diagram reasoning benchmarks over the Qwen2.5-VL baseline.
 
-## Links
-<p>
-  <a href="git_project_page.html" style="background:#f68946;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;margin-right:10px;">Project Page</a>
-  <a href="https://arxiv.org/abs/TBD" style="background:#008ad7;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;">arXiv (coming soon)</a>
+<p align="center">
+<img src="assets/architecture.png" alt="architecture-figure">
 </p>
 
-## Repository Layout
+
+<!-- ## 📢 Latest Updates
+- **Jan 2025** — Repo reorganized with continuous self-consistency training script and evaluation harness.
+- **Dec 2024** — Added automatic resume and per-iteration JSONL logging for stable long runs.
+- **Nov 2024** — Project page published with benchmark tables and visuals. -->
+
+## Repository layout
 - `src/train.py`: core training loop, LoRA setup, adaptive KL, checkpoints, and logging.
 - `src/train.sh`: example hyperparameters for Qwen2.5-VL-7B with LoRA.
 - `Evaluation/lmms-eval`: evaluation harness (based on lmms-eval) with a ready-made script.
-- `git_project_page.html`: project page containing full tables and figures.
 
 ## Setup
 1. Install Python dependencies:
@@ -86,5 +104,21 @@ Replace `lora_path` with the checkpoint directory you want to test. Additional t
 | Qwen2.5-VL-7B + Discrete reward         | 84.62   | 68.88     | 22.52      | 42.10     | 80.52                         | 82.18 | 87.98     | 50.84              |
 | **Qwen2.5-VL-7B + Continuous reward (EvoLMM)** | **86.70** | **70.52**   | **24.81**   | **44.88**   | **81.06**                     | **83.41** | **89.50**   | **52.01**          |
 
-For additional ablations (LoRA vs. QLoRA/full fine-tune) and other backbones (InternVL3-8B, Gemma-3-12B, Llama-3.2-11B-Vision), see `arxiv` or the project website.
+For additional ablations (LoRA vs. QLoRA/full fine-tune) and other backbones (InternVL3-8B, Gemma-3-12B, Llama-3.2-11B-Vision), see <a href="">arxiv</a>.
+
+## 📜 Citation
+```bibtex
+@article{thawakar2025evolmm,
+  title={EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards},
+  author={Thawakar, Omkar and Venkatraman, Shravan and Thawkar, Ritesh and Shaker, Abdelrahman M and Cholakkal, Hisham and Anwer, Rao Muhammad and Khan, Salman and Khan, Fahad Shahbaz},
+  journal={arXiv},
+  year={2025}
+}
+```
+
+---
+[<img src="assets/IVAL_logo.png" width="200" height="100">](https://www.ival-mbzuai.com)
+[<img src="assets/Oryx_logo.png" width="100" height="100">](https://github.com/mbzuai-oryx)
+[<img src="assets/MBZUAI_logo.png" width="360" height="85">](https://mbzuai.ac.ae)
+
  
