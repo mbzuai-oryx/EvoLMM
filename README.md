@@ -7,8 +7,8 @@
   <a href="https://huggingface.co/omkarthawakar/EvoLMM">
     <img src="https://img.shields.io/badge/HuggingFace-Models-ffae00?style=for-the-badge&logo=huggingface&logoColor=white" alt="HuggingFace">
   </a>
-  <a href="https://arxiv.org/abs/TBD">
-    <img src="https://img.shields.io/badge/arXiv-Coming%20Soon-008ad7?style=for-the-badge" alt="arXiv (coming soon)">
+  <a href="https://arxiv.org/abs/2511.16672">
+    <img src="https://img.shields.io/badge/arXiv-Paper-008ad7?style=for-the-badge" alt="arXiv">
   </a>
 </p>
 
@@ -119,15 +119,18 @@ Replace `lora_path` with the checkpoint directory you want to test. Additional t
 | **Qwen2.5-VL-72B (EvoLMM)**  | **91.04**| **76.44**  | **38.31**   | **55.45**  | **86.63**           | **88.19**| **94.63** | **67.02** |
 
 
-For additional ablations (LoRA vs. QLoRA/full fine-tune) and other backbones (InternVL3-8B, Gemma-3-12B, Llama-3.2-11B-Vision), see <a href="">arxiv</a>.
+For additional ablations (LoRA vs. QLoRA/full fine-tune) and other backbones (InternVL3-8B, Gemma-3-12B, Llama-3.2-11B-Vision), see <a href="https://arxiv.org/abs/2511.16672">arxiv</a>.
 
 ## 📜 Citation
 ```bibtex
-@article{thawakar2025evolmm,
-  title={EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards},
-  author={Thawakar, Omkar and Venkatraman, Shravan and Thawkar, Ritesh and Shaker, Abdelrahman M and Cholakkal, Hisham and Anwer, Rao Muhammad and Khan, Salman and Khan, Fahad Shahbaz},
-  journal={arXiv},
-  year={2025}
+@misc{thawakar2025evolmmselfevolvinglargemultimodal,
+      title={EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards}, 
+      author={Omkar Thawakar and Shravan Venkatraman and Ritesh Thawkar and Abdelrahman Shaker and Hisham Cholakkal and Rao Muhammad Anwer and Salman Khan and Fahad Khan},
+      year={2025},
+      eprint={2511.16672},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2511.16672}, 
 }
 ```
 
