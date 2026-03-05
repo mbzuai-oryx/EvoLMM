@@ -1,4 +1,4 @@
-# EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards
+# EvoLMM: Self-Evolving Large Multimodal Models with Continuous Rewards [CVPR 2026 (Findings) 🔥]
 
 <p>
   <a href="https://mbzuai-oryx.github.io/EvoLMM/">
